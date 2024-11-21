@@ -1,0 +1,386 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for readability */
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    background: none; /* Fully transparent */
+    color: #ffffff;
+    text-align: center;
+    padding: 4em 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: slideIn 1s ease-out;
+    font-weight: bold;
+    color: #80cbc4; /* Vibrant accent color */
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadow for better contrast */
+}
+
+header p {
+    margin: 0.5em 0 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #b0bec5; /* Subtle lighter text */
+}
+
+/* Navigation Bar */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: rgba(43, 43, 43, 0.7); /* Semi-transparent nav bar */
+    margin: 0;
+    padding: 0.5em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #80cbc4; /* Accent color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+    transform: scale(1.2);
+}
+
+/* Fully Transparent Sections */
+section {
+    padding: 3em 2em;
+    margin: 0 auto;
+    max-width: 900px;
+    background: none; /* Fully transparent */
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Floating shadow effect */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease-out forwards;
+    margin-bottom: 2em;
+    color: #e0e0e0;
+}
+
+h2 {
+    color: #80cbc4;
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add depth to text */
+    border-bottom: none; /* Remove borders */
+}
+
+/* Projects */
+/* Projects */
+.project {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    padding: 2em;
+    margin: 1.5em 0;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Stronger floating effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover effects for projects */
+.project:hover {
+    transform: translateY(-15px); /* Slightly stronger hover effect */
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+    border: 2px solid #80cbc4; /* Add a vibrant border on hover */
+}
+
+/* Adding a subtle gradient background on hover */
+.project:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(128, 204, 196, 0.6), rgba(50, 150, 130, 0.6));
+    z-index: 0;
+}
+
+/* Project Title */
+.project h3 {
+    color: #80cbc4; /* Accent color for project titles */
+    font-size: 1.8em;
+    font-weight: bold;
+    z-index: 1; /* Keep text above background */
+    transition: color 0.3s ease;
+}
+
+.project:hover h3 {
+    color: #ffffff; /* Change title color on hover */
+}
+
+/* Adding a shadow to the project title for better contrast */
+.project h3 {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Project Description */
+.project p {
+    color: #e0e0e0; /* Lighter text color */
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.6;
+    z-index: 1;
+}
+
+/* Hover effect for text */
+.project:hover p {
+    color: #ffffff; /* Lighten description text on hover */
+    font-weight: 500; /* Make text a little bolder */
+}
+
+/* Optional: Adding some custom icons or buttons */
+.project .btn {
+    background-color: #4caf50; /* Green button for links */
+    color: white;
+    padding: 0.8em 1.5em;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+.project .btn:hover {
+    background-color: #388e3c;
+}
+
+/* Adding a subtle underline effect to links */
+.project .btn:focus, .project .btn:hover {
+    text-decoration: underline;
+}
+
+/* Adding rounded corners to project images (optional) */
+.project img {
+    border-radius: 10px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.project:hover img {
+    transform: scale(1.05); /* Slight zoom effect on image */
+}
+
+/* Positioning for background gradient (optional) */
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(128, 204, 196, 0.4), rgba(50, 150, 130, 0.4));
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover::before {
+    opacity: 1;
+}
+
+
+/* Buttons */
+.btn {
+    padding: 0.8em 1.5em;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #2e7d32;
+    transform: scale(1);
+}
+
+/* Contact Section */
+#contact {
+    background: none; /* Fully transparent */
+    color: #ffffff;
+    padding: 3em 2em;
+    margin: 2em auto;
+    max-width: 900px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Floating shadow effect */
+}
+
+#contact h2 {
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+    color: #80cbc4;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#contact p {
+    font-size: 1.1em;
+    margin: 1em 0;
+    line-height: 1.6;
+}
+
+#contact a {
+    color: #80cbc4; /* Accent color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #4caf50;
+}
+
+/* Particles.js Container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Keep particles behind content */
+    pointer-events: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: transparent; /* Fully transparent */
+    color: #b0bec5;
+    padding: 1.5em 0;
+    animation: fadeIn 2s ease-in-out;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #80cbc4; /* Accent color for footer links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #4caf50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+}
+/* Sliding and Fading Animation */
+#role {
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #80cbc4;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideFade 2s ease-in-out forwards;
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Coding Profile Section */
+#coding-profile {
+    background: rgba(30, 30, 30, 0.9); /* Semi-transparent background */
+    padding: 3em 2em;
+    margin: 2em auto;
+    max-width: 900px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    color: #e0e0e0;
+}
+
+#coding-profile h2 {
+    color: #80cbc4;
+    font-size: 2.2em;
+    margin-bottom: 0.5em;
+}
+
+#coding-profile ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#coding-profile ul li {
+    font-size: 1.1em;
+    margin: 0.8em 0;
+}
+
+#coding-profile a {
+    color: #80cbc4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#coding-profile a:hover {
+    color: #4caf50;
+}
